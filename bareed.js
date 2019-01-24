@@ -41,7 +41,7 @@ class Point {
  **********************************************************/
 class Wallet {
   // implement Wallet!
-  constructor(money) {}
+  constructor(money = 0) {}
 
   credit = amount => {};
 
