@@ -22,7 +22,7 @@ describe("new Vendor('Hamsa', 4, 3)", () => {
   test("inherits name, location and wallet from Person", () => {
     let expectedLocation = new Point(4, 3);
     expect(vendor.name).toBe("Asis");
-    expect(vendor.location).toEqual(expectedLocation);
+    expect(vendor.location.equals(expectedLocation)).toBe(true);
     expect(vendor.location instanceof Point).toBe(true);
     expect(vendor.wallet instanceof Wallet).toBe(true);
     expect(vendor.wallet.money).toBe(0);
@@ -32,7 +32,7 @@ describe("new Vendor('Hamsa', 4, 3)", () => {
     let newPoint = new Point(12, 13);
     vendor.moveTo(newPoint);
     let newLocation = vendor.location;
-    expect(newLocation).toEqual(newPoint);
+    expect(newLocation.equals(newPoint)).toBe(true);
   });
 
   test("has a range initially set to 5", () => {

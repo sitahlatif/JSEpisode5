@@ -22,7 +22,7 @@ describe("new Customer('Aziz', 4, 3)", () => {
   test("inherits name, location and wallet from Person", () => {
     let expectedLocation = new Point(4, 3);
     expect(customer.name).toBe("Asis");
-    expect(customer.location).toEqual(expectedLocation);
+    expect(customer.location.equals(expectedLocation)).toBe(true);
     expect(customer.location instanceof Point).toBe(true);
     expect(customer.wallet instanceof Wallet).toBe(true);
   });
@@ -92,7 +92,7 @@ describe("new Customer('Aziz', 4, 3)", () => {
       let originalLocation = new Point(1000, 1000);
       customer.requestIceCream(vendor, 1);
 
-      expect(vendor.location).toEqual(originalLocation);
+      expect(vendor.location.equals(originalLocation)).toBe(true);
       expect(vendor.wallet.money).toBe(0);
       expect(customer.wallet.money).toBe(10);
     });
@@ -103,7 +103,7 @@ describe("new Customer('Aziz', 4, 3)", () => {
       customer.wallet.money = 0;
       customer.requestIceCream(vendor, 1);
 
-      expect(vendor.location).toEqual(originalLocation);
+      expect(vendor.location.equals(originalLocation)).toBe(true);
       expect(vendor.wallet.money).toBe(0);
       expect(customer.wallet.money).toBe(0);
     });

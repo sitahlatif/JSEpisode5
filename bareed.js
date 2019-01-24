@@ -21,6 +21,8 @@ class Point {
     return Math.sqrt(xDelta * xDelta + yDelta * yDelta); // PYTHAGORAS!
   };
 
+  equals = point => point.x === this.x && point.y === this.y;
+
   static randomPoint = (maxX, maxY) => {
     let x = Math.random() * (maxX || 100);
     let y = Math.random() * (maxY || 100);

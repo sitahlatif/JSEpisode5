@@ -26,7 +26,7 @@ describe("new Person('Asis', 4, 3)", () => {
 
     test("with coordinates (4,3)", () => {
       let expected = new Point(4, 3);
-      expect(person.location).toEqual(expected);
+      expect(person.location.equals(expected)).toBe(true);
     });
   });
 
