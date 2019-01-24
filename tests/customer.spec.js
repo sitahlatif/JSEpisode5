@@ -35,7 +35,7 @@ describe("new Customer('Aziz', 4, 3)", () => {
     let newPoint = new Point(12, 13);
     customer.moveTo(newPoint);
     let newLocation = customer.location;
-    expect(newLocation).toEqual(newPoint);
+    expect(newLocation).toBe(newPoint);
   });
 
   describe("has a _isInRange(vendor) method which detects if they are in range of the vendor", () => {
@@ -126,7 +126,7 @@ describe("new Customer('Aziz', 4, 3)", () => {
 
       customer.requestIceCream(vendor, numberOfIceCreams);
 
-      expect(vendor.location).toEqual(customer.location);
+      expect(vendor.location).toBe(customer.location);
       expect(vendor.wallet.money).toBe(expectedVendorMoney);
       expect(customer.wallet.money).toBe(expectedCustomerMoney);
     });

@@ -47,7 +47,7 @@ describe("new Vendor('Hamsa', 4, 3)", () => {
     test("moves the vendor to the customer location", () => {
       let customer = new Customer("Hamsa", 0, 0);
       vendor.sellTo(customer, 1);
-      expect(vendor.location).toEqual(customer.location);
+      expect(vendor.location).toBe(customer.location);
     });
 
     test("transfers money from the customer wallet to the vendor wallet", () => {

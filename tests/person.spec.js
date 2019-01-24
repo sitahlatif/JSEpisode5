@@ -44,6 +44,6 @@ describe("new Person('Asis', 4, 3)", () => {
     let newPoint = new Point(12, 13);
     person.moveTo(newPoint);
     let newLocation = person.location;
-    expect(newLocation).toEqual(newPoint);
+    expect(newLocation).toBe(newPoint);
   });
 });
