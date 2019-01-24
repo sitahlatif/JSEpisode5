@@ -13,10 +13,5 @@
   },
   "scripts": {
     "test": "jest --watchAll"
-  },
-  "dependencies": {
-    "@babel/preset-env": "^7.3.1",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.6.0"
   }
 }
