@@ -15,17 +15,17 @@ class Point {
     this.y = y;
   }
 
-  distanceTo(point) {
+  distanceTo = point => {
     let xDelta = this.x - point.x;
     let yDelta = this.y - point.y;
     return Math.sqrt(xDelta * xDelta + yDelta * yDelta); // PYTHAGORAS!
-  }
+  };
 
-  static randomPoint(maxX, maxY) {
+  static randomPoint = (maxX, maxY) => {
     let x = Math.random() * (maxX || 100);
     let y = Math.random() * (maxY || 100);
     return new Point(x, y);
-  }
+  };
 }
 
 /**********************************************************
@@ -43,9 +43,9 @@ class Wallet {
   // implement Wallet!
   constructor(money) {}
 
-  credit(amount) {}
+  credit = amount => {};
 
-  debit(amount) {}
+  debit = amount => {};
 }
 
 /**********************************************************
@@ -102,7 +102,7 @@ class Customer {
   // implement Customer!
 }
 
-module.exports = { Point, Wallet, Person, Customer, Vendor };
+export { Point, Wallet, Person, Customer, Vendor };
 
 /***********************************************************
  * If you want examples of how to use the
